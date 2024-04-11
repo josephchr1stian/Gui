@@ -4,14 +4,10 @@
 
 #include "Application.h"
 #include "MouseEvents.h"
-
+ std::vector<Text> Application::textVector;
 void Application::run()
 {
-    static std::vector<Text> Texts;
     sf::RenderWindow window({720, 420, 32}, "GUI LIBRARY");
-    Text text(LIN_LIBERTINE);
-    text.setCharacterSize(32);
-    text.setString("crystal clearr");
     sf::Text words;
 
     words.setFont(FontManager::getFont(LIN_LIBERTINE));
@@ -25,20 +21,17 @@ void Application::run()
             if(event.type == sf::Event::Closed)
 
                 window.close();
-            text.eventHandler(window, event);
-            for (Text& t : Texts)
+            for (Text& t : textVector)
                 t.eventHandler(window, event);
         }
-        for(Text & t: Texts)
+        for(Text & t: textVector)
             t.update();
-        text.update();
-        window.clear();
-        window.draw(text);
-        //window.draw(words);
+        window.clear();//window.draw(words);
+        for(Text & t: textVector)
+        window.draw(t);
         window.display();
     }
 }
-
 void Application::push(const Text &text) {
-    Texts.push_back(text);
+    textVector.push_back(text);
 }

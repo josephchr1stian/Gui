@@ -1,0 +1,23 @@
+
+You will have a text object. You will have a stack
+
+You will have a SnapShot S, and a GUI component pointer
+Every time there is an input , you are adding a text object into the stack
+
+When you click undo, the stack will be popped
+
+Struct History Node{
+    Snapshot s;
+    GUI Component * pointer;
+}
+
+Struct History Node{
+    Snapshot s;
+    GUI Component * pointer;
+}
+{
+        Stack.top().ptr -> applySnapShot(stack.top().s)
+}
+
+if (KeyboardEvents::isUndo())
+    history.pop;

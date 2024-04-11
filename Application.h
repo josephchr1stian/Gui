@@ -11,7 +11,7 @@
 class Application
 {
 private:
-    static std::vector<Text> Texts;
+    static std::vector<Text> textVector;
 public:
     static void run();
     static void push(const Text &text);
