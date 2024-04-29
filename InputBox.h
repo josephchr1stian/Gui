@@ -8,6 +8,7 @@
 #include "Text.h"
 #include "FontEnums.h"
 #include "Cursor.h"
+#include "SFML/Audio.hpp"
 #include <iostream>
 
 class InputBox: public sf::RectangleShape
@@ -16,6 +17,8 @@ class InputBox: public sf::RectangleShape
 public:
     Text text;
     sf::String string;
+    sf::SoundBuffer stroke, returnLine;
+    sf::Sound sound, newLine;
     sf::Clock clock;
     Cursor cursor;
     InputBox();
@@ -23,6 +26,7 @@ public:
     void eventHandler(sf::RenderWindow& window, sf::Event & event);
     void draw(sf::RenderTarget &window, sf::RenderStates states) const override;
     void handle(sf::Event &event);
+    void loadStroke();
 
 };
 

@@ -12,6 +12,7 @@ void Application::run()
     sf::RenderWindow window({720, 420, 32}, "GUI LIBRARY");
     sf::Text words;
 
+
     words.setFont(FontManager::getFont(LIN_LIBERTINE));
     words.setString("Hello");
     words.setCharacterSize(24);

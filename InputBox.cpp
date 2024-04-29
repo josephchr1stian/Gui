@@ -5,6 +5,8 @@
 #include "InputBox.h"
 InputBox::InputBox()
 {
+    loadStroke();
+    clock.restart();
    //sf::Vector2f startPos = this->getPosition();
    //this->setPosition(100,100);
    this->setSize({100,100});
@@ -20,6 +22,7 @@ InputBox::InputBox()
 void InputBox:: update()
 {
     //text.setString(string);
+    cursor.update(clock);
 
 
 }
@@ -29,37 +32,26 @@ void InputBox:: eventHandler(sf::RenderWindow& window, sf::Event & event)
     {
         std::cout<<event.text.unicode;
         handle(event);
-
     }
-
-    //textObject.set
+    cursor.setPosition(text.findCharacterPos(*string.end()-1));
+    cursor.setPosition({cursor.getPosition().x, cursor.getPosition().y+3});
 }
 void InputBox:: draw(sf::RenderTarget &window, sf::RenderStates states) const
 {
-  //window.draw(*this);
   window.draw(text);
-
+  window.draw(cursor);
 }
 
 void InputBox:: handle(sf::Event & event)
 {
     if(event.text.unicode < 128)
     {
-
         if(event.text.unicode == '\b')
         {
-            std::cout<<"LOL";
-            sf::String copy;
-            for(auto letter = string.begin(); letter != string.end(); ++letter )
-            {
-                if (letter == string.end())
-                    break;
-                copy += *letter;
-            }
-            string = copy;
-            text.setString(copy);
+            string.erase(string.getSize()-1,1);
         }
-        string+= event.text.unicode; // Add the pressed key to the string
+        else
+            string+= event.text.unicode; // Add the pressed key to the string
         text.setString(string);
     }
     else
@@ -83,4 +75,14 @@ void InputBox:: handle(sf::Event & event)
             text.setString(copy);
         }
     }
+}
+
+void InputBox::loadStroke()
+{
+    if(!stroke.loadFromFile("Sounds/keystroke.wav"))
+        std::cout<<"airer";
+    if(!returnLine.loadFromFile("Sounds/typewriter-line-break-1.wav"))
+        std::cout<<"airer";
+    sound.setBuffer(stroke);
+    newLine.setBuffer(returnLine);
 }
