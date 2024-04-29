@@ -7,6 +7,7 @@
 #include "SFML/Graphics.hpp"
 #include "Text.h"
 #include "MouseEvents.h"
+#include "InputBox.h"
 #include <vector>
 class Application
 {

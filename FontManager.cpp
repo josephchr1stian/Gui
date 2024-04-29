@@ -19,6 +19,8 @@ std::string FontManager::getFontPath(fontEnum font)
 {
     switch(font)
     {
+        case TYPEWRITER:
+            return "Fonts/american-typewriter.ttf";
         case LIN_LIBERTINE:
             return "Fonts/LinLibertine_aS.ttf";
         case OPENSANS_BOLD:

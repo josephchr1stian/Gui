@@ -5,8 +5,10 @@
 #include "Application.h"
 #include "MouseEvents.h"
  std::vector<Text> Application::textVector;
+
 void Application::run()
 {
+    InputBox inputBoux;
     sf::RenderWindow window({720, 420, 32}, "GUI LIBRARY");
     sf::Text words;
 
@@ -23,12 +25,15 @@ void Application::run()
                 window.close();
             for (Text& t : textVector)
                 t.eventHandler(window, event);
+            inputBoux.eventHandler(window, event);
         }
         for(Text & t: textVector)
             t.update();
+        inputBoux.update();
         window.clear();//window.draw(words);
-        for(Text & t: textVector)
-        window.draw(t);
+        //for(Text & t: textVector)
+        //window.draw(t);
+        window.draw(inputBoux);
         window.display();
     }
 }

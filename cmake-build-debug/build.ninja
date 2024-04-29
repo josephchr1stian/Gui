@@ -91,6 +91,20 @@ build CMakeFiles/gui_Library.dir/MouseEvents.cpp.o: CXX_COMPILER__gui_Library_De
   OBJECT_DIR = CMakeFiles/gui_Library.dir
   OBJECT_FILE_DIR = CMakeFiles/gui_Library.dir
 
+build CMakeFiles/gui_Library.dir/InputBox.cpp.o: CXX_COMPILER__gui_Library_Debug /Users/josephgarcia/CLionProjects/gui.Library/InputBox.cpp || cmake_object_order_depends_target_gui_Library
+  DEP_FILE = CMakeFiles/gui_Library.dir/InputBox.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -std=gnu++2a
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/gui_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles/gui_Library.dir
+
+build CMakeFiles/gui_Library.dir/Cursor.cpp.o: CXX_COMPILER__gui_Library_Debug /Users/josephgarcia/CLionProjects/gui.Library/Cursor.cpp || cmake_object_order_depends_target_gui_Library
+  DEP_FILE = CMakeFiles/gui_Library.dir/Cursor.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -std=gnu++2a
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/gui_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles/gui_Library.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target gui_Library
@@ -99,7 +113,7 @@ build CMakeFiles/gui_Library.dir/MouseEvents.cpp.o: CXX_COMPILER__gui_Library_De
 #############################################
 # Link the executable gui_Library
 
-build gui_Library: CXX_EXECUTABLE_LINKER__gui_Library_Debug CMakeFiles/gui_Library.dir/main.cpp.o CMakeFiles/gui_Library.dir/FontManager.cpp.o CMakeFiles/gui_Library.dir/Application.cpp.o CMakeFiles/gui_Library.dir/Text.cpp.o CMakeFiles/gui_Library.dir/States.cpp.o CMakeFiles/gui_Library.dir/MouseEvents.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.6.0.dylib /opt/homebrew/lib/libsfml-audio.2.6.0.dylib /opt/homebrew/lib/libsfml-window.2.6.0.dylib /opt/homebrew/lib/libsfml-system.2.6.0.dylib
+build gui_Library: CXX_EXECUTABLE_LINKER__gui_Library_Debug CMakeFiles/gui_Library.dir/main.cpp.o CMakeFiles/gui_Library.dir/FontManager.cpp.o CMakeFiles/gui_Library.dir/Application.cpp.o CMakeFiles/gui_Library.dir/Text.cpp.o CMakeFiles/gui_Library.dir/States.cpp.o CMakeFiles/gui_Library.dir/MouseEvents.cpp.o CMakeFiles/gui_Library.dir/InputBox.cpp.o CMakeFiles/gui_Library.dir/Cursor.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.6.0.dylib /opt/homebrew/lib/libsfml-audio.2.6.0.dylib /opt/homebrew/lib/libsfml-window.2.6.0.dylib /opt/homebrew/lib/libsfml-system.2.6.0.dylib
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-graphics.2.6.0.dylib  /opt/homebrew/lib/libsfml-audio.2.6.0.dylib  /opt/homebrew/lib/libsfml-window.2.6.0.dylib  /opt/homebrew/lib/libsfml-system.2.6.0.dylib
   OBJECT_DIR = CMakeFiles/gui_Library.dir

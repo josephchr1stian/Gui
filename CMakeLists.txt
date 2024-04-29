@@ -8,7 +8,7 @@ add_executable(gui_Library main.cpp
         FontManager.cpp
         FontEnums.h
         Application.h
-        Application.cpp Text.cpp Text.h StateEnum.h States.cpp States.h MouseEvents.cpp MouseEvents.h)
+        Application.cpp Text.cpp Text.h StateEnum.h States.cpp States.h MouseEvents.cpp MouseEvents.h InputBox.cpp InputBox.h Cursor.cpp Cursor.h)
 
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
 

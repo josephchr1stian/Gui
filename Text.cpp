@@ -4,7 +4,7 @@
 
 #include "Text.h"
 
-Text::Text() : Text(LIN_LIBERTINE)
+Text::Text() : Text(TYPEWRITER)
 {
 
 }

@@ -8,6 +8,7 @@
 #include "SFML/Graphics.hpp"
 #include "States.h"
 #include "MouseEvents.h"
+#include <iostream>
 class Text : public sf::Text, public States
 {
 
